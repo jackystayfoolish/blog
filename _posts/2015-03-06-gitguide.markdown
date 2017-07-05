@@ -1,0 +1,11 @@
+---
+layout: default
+title: git教程
+---
+#git教程
+
+##安装
+###windows安装
+msysgit是Windows版的Git，从http://msysgit.github.io/下载，然后按默认选项安装即可。  
+安装完成后，在开始菜单里找到“Git”->“Git Bash”，蹦出一个类似命令行窗口的东西，就说明Git安装成功！
+
