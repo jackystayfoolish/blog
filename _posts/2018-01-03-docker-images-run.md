@@ -1,12 +1,12 @@
 ---
 layout: post
 title: Docker-制作和运行镜像
-category: Meta
+category: Linux
 ---
 * 目录
 {:toc}
 
-本教程目的是展示docker镜像的制作和运行，以mysql和[joget](http://www.joget.org)为例。
+本文目的是展示docker镜像的制作和运行，以mysql为例。
 
 ## mysql客户化镜像制作
 ### 目标
@@ -101,15 +101,3 @@ joget-mysql:v1表示该容器基于什么镜像运行
 关闭后可以使用start再启动:`docker container start joget-mysql`
 如果关闭容器后，以后不想再启动了，可以删除该容器:`docker rm joget-mysql`
 也可以使用命令prune删除所有不在启动状态的容器:`docker container prune`
-
-
-### 安装
-```
-yum install docker-ce
-```
-```
-systemctl start docker
-```
-```
-docker run hello-world #如果运行成功可以看到hello world的提示信息
-```

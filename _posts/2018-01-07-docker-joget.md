@@ -1,12 +1,12 @@
 ---
 layout: post
 title: Docker-Joget
-category: Meta
+category: Linux
 ---
 * 目录
 {:toc}
 
-本教程目的是[joget](http://www.joget.org)的镜像制作教程,Joget是一款开源的工作流软件。
+本文是[joget](http://www.joget.org)的镜像制作教程,Joget是一款开源的工作流软件。
 
 ## joget镜像制作
 ### 目标

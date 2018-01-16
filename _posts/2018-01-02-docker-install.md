@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Docker-安装
-category: Meta
+category: Linux
 ---
 ## 安装环境
 操作系统:centos
