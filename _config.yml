@@ -22,3 +22,5 @@ kramdown:
   hard_wrap: true
 
 port: 3000
+
+theme: jekyll-theme-merlot
