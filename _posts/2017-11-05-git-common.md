@@ -5,7 +5,6 @@ category: Linux
 ---
 ## Git原理
 存在三个区域：working tree(工作区), index file(暂存区), commit(版本库)
-![1](http://ecbadddb.wiz03.com/share/resources/965b7c43-96c7-4868-ac33-9e5e0da4b084/index_files/38818738.png)
 
 ## 命令
 ### workspace
@@ -23,13 +22,51 @@ category: Linux
 ### 本地仓库
 提交
 `git commit -m "comment goes here"`
+如果加入-a则会先添加全部再提交，省去git add步骤
+
 版本回退
 `git reset --hard versionnum`
 
+### 远程仓库
+设置ssh key
+用户目录下.ssh目录下的github_rsa.pub文件内容添加到github的ssh keys设置中，授权这台电脑可以推送到github。如果没设置的话推送时会报fatal:unable to access的错误
 
+本地仓库和远程仓库关联
+`git remote add origin yourcloneurl `
+添加后远程库的名字就是origin
+
+推送
+`git push -u origin dev`
+把当前分支(不一定叫dev，但最好名称一致)推送到origin，远程仓库创建dev分支,加入-u参数是说将本地dev推送到远程dev分支，并将本地dev和远程dev分支关联，下次推送可以用命令：
+`git push origin dev`
+
+### 分支
+创建
+`git branch dev`
+切换
+`git checkout dev`
+创建并切换
+`git checkout -b dev`
+合并指定分支到当前分支
+`git merge dev`
+删除
+`git branch -d dev`
+
+特定分支关联
+`git branch --set-upstream dev origin/dev`
+
+### tag
+创建标签
+`git tag v1.0`
+推送标签
+`git push origin v1.0`
 
 ### diff
 `git diff` ：，比较working tree和index file(如没有则是和commit)的区别
 `git diff --cached`: 比较index file和commit的区别
 `git diff HEAD`:比较working tree和commit的区别
 上述命令都可以加入filename用来单独对比某个文件。
+
+## github
+如果对一个开源项目感兴趣可以fork到自己的github仓库，clone到本地做修改后push。
+如果要将fork出来的项目与原项目merge,需要pull request，提交申请等原作者同意后才会将修改最终提交。
