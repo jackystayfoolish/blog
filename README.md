@@ -38,4 +38,16 @@ Having trouble with Pages? Check out our [documentation](https://help.github.com
 
 # 命令
 
+## 启动jekyll
 jekyll serve --watch
+
+## git项目
+初始化
+git init
+git remote add origin https://github.com/jackystayfoolish/http.git
+
+提交
+git add -A
+git status
+git commit -a -m ""
+git push -u origin master
